@@ -4,8 +4,7 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Install checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Inastall Python
         uses: actions/setup-python@v2
         with:
@@ -20,5 +19,5 @@ jobs:
           virtualenvs.path: "{cache-dir}/virtualenvs"  # /home/xisp/.cache/pypoetry/virtualenvs 
       - name: Install depen
         run:  poetry add --dev wemake-python-styleguide
-        name: Command         
+      - name: Command         
         run: make lint
