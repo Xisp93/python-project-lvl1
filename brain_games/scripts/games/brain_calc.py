@@ -8,7 +8,7 @@ from brain_games.scripts.function import name
 def main():
     """My game."""
     print('What is the result of the expression?')
-    operat, res, index, rang = ['+', '-', '*'], 0, 0, 25
+    operat, res, index, rang = ['+', '*', '-'], 0, 0, 25
     while index <= 2:
         operat_res = random.choice(operat)
         num_one = random.randrange(0, rang)
