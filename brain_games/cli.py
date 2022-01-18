@@ -1,9 +1,7 @@
-"""Скрипт для имени пользоватедя."""
-
-import prompt
+"""Prints the element given as input."""
 
 
 def welcome_user():
-    """Запрашивает имя пользователя,и говорит привет ."""
-    name = prompt.string('Make I have your name?')
-    print('Hello,{0}!'.format(name))
+    """Возвращает имя пользователя Returns: name."""
+    name = input('Make I have your name?')
+    return name

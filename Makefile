@@ -4,6 +4,12 @@ install:
 brain-games:
 	poetry run brain-games
 
+brain-even:
+	poetry run brain-even
+
+brain-calc:
+	poetry run brain-calc
+
 build:
 	poetry build
 
@@ -17,5 +23,5 @@ lint:
 	poetry run flake8 brain_games
 
 package-update:
-	python3 -m pip uninstall hexlet-code 
-	python3 -m pip install --user dist/*.whl
+	python3 -m pip uninstall hexlet_code
+	python3 -m pip install --user dist/*.whl	
