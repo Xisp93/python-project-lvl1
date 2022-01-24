@@ -15,3 +15,6 @@ https://asciinema.org/a/PBBjX89Q909Tp4uafiamzTf9y
 
 ##### 4.Arithmetic Progression Game
 https://asciinema.org/a/yGx9uIe9IUXc3aedtRCLCb8Ed
+
+##### 5.Game: "Is it a prime number?"
+https://asciinema.org/a/ffIFyO4m8b3ZNSJC99PMdIZFY
