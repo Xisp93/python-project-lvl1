@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Игра ,в которой находят НОД."""
 import random
 
