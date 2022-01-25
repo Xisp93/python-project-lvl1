@@ -34,4 +34,4 @@ def main():
             print("Let's try again,{0}!".format(name))
             break
     if index == 3:
-        print('Congratulations,{0}!'.format(name))
+        print('Congratulations, {0}!'.format(name))
