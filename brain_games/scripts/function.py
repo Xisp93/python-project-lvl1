@@ -1,6 +1,24 @@
 """Функции для игр."""
 
 
+def prime(number):
+    """Показывает простое ли число.
+
+    Args:
+        number: заданное число
+    """
+    count, flag = 0, ''
+    for index in range(1, number):
+        if number % index == 0:
+            count += 1
+        if count >= 2:
+            flag = 'no'
+            break
+        else:
+            flag = 'yes'
+    return flag
+
+
 def nod(num_one, num_two):
     """Вычисление НОД.
 
