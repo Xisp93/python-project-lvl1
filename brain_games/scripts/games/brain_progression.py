@@ -31,7 +31,7 @@ def main():
             print('Correct!')
         else:
             print(f"'{answ}' is wrong answer ;(.Correct answer was '{r_answ}'.")
-            print("Let's try again,{0}!".format(name))
+            print("Let's try again, {0}!".format(name))
             break
     if index == 3:
         print('Congratulations, {0}!'.format(name))
