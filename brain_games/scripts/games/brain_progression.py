@@ -25,7 +25,7 @@ def main():
             lst.append(rang)
         r_answ = lst[secret_num]
         lst[secret_num] = '..'
-        print('Question: ', *lst)
+        print('Question:', *lst)
         answ = int(prompt.string('You answer: '))
         if answ == r_answ:
             print('Correct!')
