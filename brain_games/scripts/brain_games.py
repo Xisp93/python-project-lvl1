@@ -5,7 +5,7 @@ from brain_games.cli import welcome_user
 
 def main():
     """С этого начинает работать скрипт."""
-    #print('Welcome to the Brain Games!')
+    print('Welcome to the Brain Games!')
     name = welcome_user()
     #print('Hello, {0}!'.format(name))
 
