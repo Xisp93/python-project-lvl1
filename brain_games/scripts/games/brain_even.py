@@ -1,12 +1,15 @@
+#!/usr/bin/env python3
 """Игра,которая определяет четность."""
 import random
 
 import prompt
-from brain_games.scripts.function import name
+from brain_games.scripts.function import welcome_user
 
 
 def main():
     """Games."""
+    name = welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     flag, index = '', 0
     while index <= 2:
         num = random.randrange(0, 100)

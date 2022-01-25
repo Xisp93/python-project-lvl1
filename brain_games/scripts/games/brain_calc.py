@@ -3,11 +3,12 @@
 import random
 
 import prompt
-from brain_games.scripts.function import name
+from brain_games.scripts.function import welcome_user
 
 
 def main():
     """My game."""
+    name = welcome_user()
     print('What is the result of the expression?')
     operat, res, index, rang = ['+', '*', '-'], 0, 0, 25
     while index <= 2:
