@@ -3,12 +3,11 @@
 import random
 
 import prompt
-from brain_games.scripts.function import welcome_user
+from brain_games.scripts.function import NAME
 
 
 def main():
     """Games."""
-    name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     flag, index = '', 0
     while index <= 2:
@@ -31,4 +30,4 @@ def main():
         else:
             flag = 'no'
         print(f"'{answ}'is wrong answer;(.Correct answer was'{flag}'.")
-        print(f"Let's try again, {name}!")
+        print(f"Let's try again, {NAME}!")
