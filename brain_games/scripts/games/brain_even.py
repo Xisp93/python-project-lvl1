@@ -23,7 +23,7 @@ def main():
         else:
             break
     if index == 3:
-        print('Congratulations, {0}!'.format(name))
+        print('Congratulations, {0}!'.format(NAME))
     else:
         if num % 2 == 0:
             flag = 'yes'
