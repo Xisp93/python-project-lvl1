@@ -3,27 +3,22 @@
 import random
 
 import prompt
-from brain_games.scripts.function import nod, welcome_user
+from brain_games.scripts.function import NAME, answer, nod
 
 
 def main():
     """Функция,которая реализует логику игры."""
-    name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
     index = 0
-    while index < 3:
+    while index <= 2:
+        index += 1
         rang = 100
         num_one = random.randrange(1, rang)
         num_two = random.randrange(1, rang)
         res = nod(num_one, num_two)
         print('Question: {0} {1}'.format(num_one, num_two))
         answ = prompt.string('You answer: ')
-        if int(answ) == int(res):
-            print('Correct!')
-            index += 1
-        else:
-            print(f"'{answ}'is wrong answer ;(.Correct answer was '{res}'.")
-            print("Let's try again, {0}!".format(name))
+        if answer(int(answ), int(res)):
             break
-    if index == 3:
-        print('Congratulations, {0}!'.format(name))
+        if index == 3:
+            print('Congratulations, {0}!'.format(NAME))

@@ -3,12 +3,11 @@
 import random
 
 import prompt
-from brain_games.scripts.function import welcome_user
+from brain_games.scripts.function import NAME, answer
 
 
 def main():
     """Функция, которая реализует логику игры."""
-    name = welcome_user()
     index = 0
     print('What number is missing in the progression?')
     while index <= 2:
@@ -27,11 +26,7 @@ def main():
         lst[secret_num] = '..'
         print('Question:', *lst)
         answ = int(prompt.string('You answer: '))
-        if answ == r_answ:
-            print('Correct!')
-        else:
-            print(f"'{answ}' is wrong answer ;(.Correct answer was '{r_answ}'.")
-            print("Let's try again, {0}!".format(name))
+        if answer(answ, r_answ):
             break
-    if index == 3:
-        print('Congratulations, {0}!'.format(name))
+        if index == 3:
+            print('Congratulations, {0}!'.format(NAME))

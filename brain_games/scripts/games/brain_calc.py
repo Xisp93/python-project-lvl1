@@ -3,15 +3,15 @@
 import random
 
 import prompt
-from brain_games.scripts.function import welcome_user
+from brain_games.scripts.function import NAME, answer
 
 
 def main():
-    """My game."""
-    name = welcome_user()
+    """Логика игры."""
     print('What is the result of the expression?')
     operat, res, index, rang = ['+', '*', '-'], 0, 0, 25
     while index <= 2:
+        index += 1
         operat_res = random.choice(operat)
         num_one = random.randrange(0, rang)
         num_two = random.randrange(0, rang)
@@ -22,13 +22,8 @@ def main():
             res = num_one - num_two
         else:
             res = num_one * num_two
-        answer = prompt.string('Your answer: ')
-        if int(answer) == res:
-            print('Correct!')
-            index += 1
-        else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{res}'.")
-            print("Let's try again, {0}!".format(name))
+        answ = prompt.string('Your answer: ')
+        if answer(int(answ), res):
             break
-    if index == 3:
-        print('Congratulations, {0}!'.format(name))
+        if index == 3:
+            print('Congratulations, {0}!'.format(NAME))

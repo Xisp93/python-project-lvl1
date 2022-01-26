@@ -3,12 +3,11 @@
 import random
 
 import prompt
-from brain_games.scripts.function import prime, welcome_user
+from brain_games.scripts.function import NAME, answer, prime
 
 
 def main():
     """Логика игры."""
-    name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     flag, index, rang = '', 0, 100
     while index <= 2:
@@ -17,11 +16,7 @@ def main():
         print('Question: {0}'.format(number))
         answ = prompt.string('You answer: ')
         flag = prime(number)
-        if flag == answ:
-            print('Correct!')
-        else:
-            print(f"'{answ}'is wrong answer;(.Correct answer was'{flag}'.")
-            print(f"Let's try again, {name}!")
+        if answer(flag, answ):
             break
         if index == 3:
-            print('Congratulations, {0}!'.format(name))
+            print('Congratulations, {0}!'.format(NAME))
