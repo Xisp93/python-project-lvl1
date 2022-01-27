@@ -6,6 +6,11 @@ authors = ["Xisp_93 <voevoda43@gmail.com>"]
 packages = [
 	{ include = "brain_games" },
 ]
+repository = "https://github.com/Xisp93/python-project-lvl1"
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
