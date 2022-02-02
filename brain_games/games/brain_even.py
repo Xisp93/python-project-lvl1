@@ -3,7 +3,7 @@
 import random
 
 import prompt
-from brain_games.scripts.function import NAME
+from brain_games.scripts.dvizhok import NAME
 
 
 def main():
