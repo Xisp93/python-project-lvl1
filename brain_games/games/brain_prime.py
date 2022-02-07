@@ -3,7 +3,8 @@
 import random
 
 import prompt
-from brain_games.scripts.dvizhok import NAME, answer, prime
+from brain_games.scripts.dvizhok import NAME, answer
+from brain_games.scripts.function import prime
 
 
 def main():

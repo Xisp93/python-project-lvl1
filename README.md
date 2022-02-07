@@ -1,3 +1,14 @@
+###Описание проекта.
+
+####Данный проект создан для :
+#####1.Отработки основ программирования языка python. 
+#####2.Лучшего понимания структуры пакетов.
+ 
+###Установка пакета.
+####Нужно в терминале прописать строку:
+
+##### make package-install
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Xisp93/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Xisp93/python-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/Xisp93/python-project-lvl1)
