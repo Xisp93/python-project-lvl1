@@ -27,11 +27,9 @@ def main_prime():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     while index <= 2:
         answ, res = brain_prime()
+        index += 1
         if answer(answ, res, name, index):
             break
-        index += 1
-    if index == 3:
-        print('Congratulations, {0}!'.format(name))
 
 
 def main_even():
@@ -41,9 +39,9 @@ def main_even():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while index <= 2:
         answ, res = brain_even()
+        index += 1
         if answer(answ, res, name, index):
             break
-        index += 1
 
 
 def main_gcd():
@@ -53,9 +51,9 @@ def main_gcd():
     print('Find the greatest common divisor of given numbers.')
     while index <= 2:
         answ, res = brain_gcd()
+        index += 1
         if answer(answ, res, name, index):
             break
-        index += 1
 
 
 def main_progression():
@@ -64,7 +62,7 @@ def main_progression():
     index = 0
     print('What number is missing in the progression?')
     while index <= 2:
+        index += 1
         answ, res = brain_progression()
         if answer(answ, res, name, index):
             break
-        index += 1
