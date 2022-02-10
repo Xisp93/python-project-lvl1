@@ -13,7 +13,7 @@ def answer_and_question():
     while index <= 9:
         index += 1
         range_number += step
-        lst.append(str(range))
+        lst.append(str(range_number))
     secret_number = random.randrange(0, len(lst))
     right_answer = lst[secret_number]
     lst[secret_number] = '..'
