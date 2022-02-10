@@ -6,7 +6,7 @@ from brain_games.games import even
 
 def main():
     """Функция вызова игры."""
-    run_games(even, even.description)
+    run_games(even)
 
 
 if __name__ == '__main__':

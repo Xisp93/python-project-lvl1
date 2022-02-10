@@ -30,16 +30,15 @@ def answer(r_answ, u_answ, name, index):
         print('Congratulations, {0}!'.format(name))
 
 
-def run_games(games, description):
+def run_games(games):
     """Движок игры.
 
     Args:
         games: модуль игры
-        description: описание игры
     """
     name = welcome_user()
     index = 0
-    print(description)
+    print(games.description)
     while index <= 2:
         index += 1
         res, question = games.answer_and_question()

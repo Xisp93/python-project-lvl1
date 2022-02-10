@@ -6,7 +6,7 @@ from brain_games.games import progression
 
 def main():
     """Функция вызова игры."""
-    run_games(progression, progression.description)
+    run_games(progression)
 
 
 if __name__ == '__main__':

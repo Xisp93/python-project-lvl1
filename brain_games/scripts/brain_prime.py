@@ -6,7 +6,7 @@ from brain_games.games import prime
 
 def main():
     """Функция вызова игры."""
-    run_games(prime, prime.description)
+    run_games(prime)
 
 
 if __name__ == '__main__':

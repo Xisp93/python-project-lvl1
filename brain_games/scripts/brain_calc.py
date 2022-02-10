@@ -6,7 +6,7 @@ from brain_games.games import calc
 
 def main():
     """Функция вызова игры."""
-    run_games(calc, calc.description)
+    run_games(calc)
 
 
 if __name__ == '__main__':
