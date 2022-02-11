@@ -5,20 +5,20 @@ import random
 
 def answer_and_question():
     """Функция, которая реализует логику игры."""
-    limit_number = 50
-    step_limit = 7
+    number_range_border = 50
+    step_border = 7
     index, lst = 0, []
-    range_number = random.randrange(0, limit_number)
-    step = random.randrange(2, step_limit)
+    number_range = random.randrange(0, number_range_border)
+    step_range = random.randrange(2, step_border)
     while index <= 9:
         index += 1
-        range_number += step
-        lst.append(str(range_number))
+        number_range += step_range
+        lst.append(str(number_range))
     secret_number = random.randrange(0, len(lst))
-    right_answer = lst[secret_number]
+    correct_answer = lst[secret_number]
     lst[secret_number] = '..'
     question = ' '.join(lst)
-    return right_answer, question
+    return correct_answer, question
 
 
 DESCRIPTION = 'What number is missing in the progression?'

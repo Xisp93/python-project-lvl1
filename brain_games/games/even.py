@@ -5,13 +5,14 @@ import random
 
 def answer_and_question():
     """Games."""
-    right_answer = ''
-    num = random.randrange(0, 100)
-    if (num % 2 == 0):
-        right_answer = 'yes'
+    correct_answer = ''
+    right_border = 100
+    number = random.randrange(0, right_border)
+    if (number % 2 == 0):
+        correct_answer = 'yes'
     else:
-        right_answer = 'no'
-    return right_answer, num
+        correct_answer = 'no'
+    return correct_answer, number
 
 
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'

@@ -3,34 +3,34 @@
 import random
 
 
-def nod(num_one, num_two):
+def gcd(first_number, second_number):
     """Вычисление НОД.
 
     Args:
-        num_one: первое случайное число
-        num_two: второе случайное число
+        first_number: первое случайное число
+        second_number: второе случайное число
     """
-    index, index1, lst1, lst2 = 0, 0, [], []
-    while index <= num_one:
+    index, index1, divider_first_num, divider_second_num = 0, 0, [], []
+    while index <= first_number:
         index += 1
-        if num_one % index == 0:
-            lst1.append(index)
-    while index1 <= num_two:
+        if first_number % index == 0:
+            divider_first_num.append(index)
+    while index1 <= second_number:
         index1 += 1
-        if num_two % index1 == 0:
-            lst2.append(index1)
-    res = list(set(lst1) & set(lst2))
-    res.sort(reverse=True)
-    return res.pop(0)
+        if second_number % index1 == 0:
+            divider_second_num.append(index1)
+    common_divisors = list(set(divider_first_num) & set(divider_second_num))
+    common_divisors.sort(reverse=True)
+    return common_divisors.pop(0)
 
 
 def answer_and_question():
     """Функция,которая реализует логику игры."""
-    rang = 100
-    number_one = random.randrange(1, rang)
-    number_two = random.randrange(1, rang)
-    question = '{0} {1}'.format(number_one, number_two)
-    return nod(number_one, number_two), question
+    right_border = 100
+    first_number = random.randrange(1, right_border)
+    second_number = random.randrange(1, right_border)
+    question = '{0} {1}'.format(first_number, second_number)
+    return gcd(first_number, second_number), question
 
 
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'

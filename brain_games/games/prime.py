@@ -9,22 +9,22 @@ def prime(number):
     Args:
         number: заданное число
     """
-    count, right_answer = 0, ''
+    count, correct_answer = 0, ''
     for index in range(1, number):
         if number % index == 0:
             count += 1
         if count >= 2:
-            right_answer = 'no'
+            correct_answer = 'no'
             break
         else:
-            right_answer = 'yes'
-    return right_answer
+            correct_answer = 'yes'
+    return correct_answer
 
 
 def answer_and_question():
     """Логика игры."""
-    rang = 100
-    number = random.randrange(1, rang)
+    right_border = 100
+    number = random.randrange(1, right_border)
     return prime(number), number
 
 
