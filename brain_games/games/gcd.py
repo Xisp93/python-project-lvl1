@@ -33,4 +33,4 @@ def answer_and_question():
     return nod(number_one, number_two), question
 
 
-description = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'

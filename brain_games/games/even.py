@@ -14,4 +14,4 @@ def answer_and_question():
     return right_answer, num
 
 
-description = 'Answer "yes" if the number is even, otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'

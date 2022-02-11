@@ -30,18 +30,18 @@ def answer(r_answ, u_answ, name, index):
         print('Congratulations, {0}!'.format(name))
 
 
-def run_games(games):
+def run_games(game):
     """Движок игры.
 
     Args:
-        games: модуль игры
+        game: модуль игры
     """
     name = welcome_user()
     index = 0
-    print(games.description)
+    print(game.DESCRIPTION)
     while index <= 2:
         index += 1
-        res, question = games.answer_and_question()
+        res, question = game.answer_and_question()
         print('Question: {0}'.format(question))
         answ = prompt.string('You answer: ')
         if answer(str(res), answ, name, index):

@@ -21,4 +21,4 @@ def answer_and_question():
     return right_answer, question
 
 
-description = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'

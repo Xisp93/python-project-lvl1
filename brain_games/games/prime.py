@@ -28,4 +28,4 @@ def answer_and_question():
     return prime(number), number
 
 
-description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'

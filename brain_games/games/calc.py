@@ -10,13 +10,8 @@ def answer_and_question():
     number_one = random.randrange(0, rang)
     number_two = random.randrange(0, rang)
     question = '{0} {1} {2}'.format(number_one, operat_res, number_two)
-    if operat_res == '+':
-        right_answer = number_one + number_two
-    elif operat_res == '-':
-        right_answer = number_one - number_two
-    else:
-        right_answer = number_one * number_two
+    right_answer = eval(question)
     return right_answer, question
 
 
-description = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
