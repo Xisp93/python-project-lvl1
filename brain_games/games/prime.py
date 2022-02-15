@@ -17,8 +17,9 @@ def is_prime(number):
     for index in range(1, number + 1):
         if number % index == 0:
             count += 1
-        if count >= 2:
-            flag = False
+            if count == 3:
+                flag = False
+                break
     return flag
 
 
