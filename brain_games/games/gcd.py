@@ -25,7 +25,7 @@ def calculates_gcd(first_number, second_number):
             divider_second_num.append(index1)
     common_divisors = list(set(divider_first_num) & set(divider_second_num))
     common_divisors.sort(reverse=True)
-    return common_divisors.pop(0)
+    return str(common_divisors.pop(0))
 
 
 def generates_answer_and_question():
