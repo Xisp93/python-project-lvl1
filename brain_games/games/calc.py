@@ -15,4 +15,4 @@ def generates_answer_and_question():
     second_number = random.randint(0, RIGHT_BORDER)
     question = f"{first_number} {random_operators} {second_number}"
     correct_answer = eval(question)
-    return correct_answer, question
+    return str(correct_answer), question
