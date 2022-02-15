@@ -3,7 +3,11 @@
 import random
 
 
-def gcd(first_number, second_number):
+RULE = "Find the greatest common divisor of given numbers."
+RIGHT_BORDER = 100
+
+
+def calculates_gcd(first_number, second_number):
     """Вычисление НОД.
 
     Args:
@@ -24,13 +28,9 @@ def gcd(first_number, second_number):
     return common_divisors.pop(0)
 
 
-def answer_and_question():
+def generates_answer_and_question():
     """Функция,которая реализует логику игры."""
-    right_border = 100
-    first_number = random.randrange(1, right_border)
-    second_number = random.randrange(1, right_border)
-    question = '{0} {1}'.format(first_number, second_number)
-    return gcd(first_number, second_number), question
-
-
-DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+    first_number = random.randrange(1, RIGHT_BORDER)
+    second_number = random.randrange(1, RIGHT_BORDER)
+    question = f"{first_number} {second_number}"
+    return calculates_gcd(first_number, second_number), question

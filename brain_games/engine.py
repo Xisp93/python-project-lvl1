@@ -3,46 +3,32 @@
 import prompt
 
 
-def welcome_user():
-    """Приветствие для игрока."""
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, {0}'.format(name))
-    return name
+NUMBER_OF_ROUNDS = 3
 
 
-def answer(r_answ, u_answ, name, index):
-    """Проверка правильности введенного ответа.
-
-    Args:
-        r_answ: правильный ответ
-        u_answ: ответ пользователя
-        name: имя игрока
-        index: флаг цикла
-    """
-    if r_answ == u_answ:
-        print('Correct!')
-    else:
-        print(f"'{u_answ}' is wrong answer ;(. Correct answer was '{r_answ}'.")
-        print("Let's try again, {0}!".format(name))
-        return True
-    if index == 3:
-        print('Congratulations, {0}!'.format(name))
-
-
-def run_games(game):
+def run_game(game):
     """Движок игры.
 
     Args:
         game: модуль игры
     """
-    name = welcome_user()
+    print("Welcome to the Brain Games!")
+    name = prompt.string("May I have your name? ")
+    print(f"Hello, {name}")
     index = 0
-    print(game.DESCRIPTION)
-    while index <= 2:
+    print(game.RULE)
+    while index < NUMBER_OF_ROUNDS:
         index += 1
-        res, question = game.answer_and_question()
-        print('Question: {0}'.format(question))
-        answ = prompt.string('You answer: ')
-        if answer(str(res), answ, name, index):
+        right_answer, question = game.generates_answer_and_question()
+        print(f"Question: {question}")
+        answer = prompt.string("You answer: ")
+        if answer == right_answer:
+            print("Correct!")
+        else:
+            print(
+                f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'."
+            )
+            print(f"Let's try again, {name}!")
             break
+    if index == 3:
+        print(f"Congratulations, {name}!")

@@ -3,22 +3,38 @@
 import random
 
 
-def answer_and_question():
+RULE = "What number is missing in the progression?"
+NUMBER_RANGE_BORDER = 50
+STEP_BORDER = 7
+LENGTH_PROGRESSION = 10
+
+
+def generates_answer_and_question():
     """Функция, которая реализует логику игры."""
-    number_range_border = 50
-    step_border = 7
-    index, lst = 0, []
-    number_range = random.randrange(0, number_range_border)
-    step_range = random.randrange(2, step_border)
-    while index <= 9:
-        index += 1
-        number_range += step_range
-        lst.append(str(number_range))
-    secret_number = random.randrange(0, len(lst))
-    correct_answer = lst[secret_number]
-    lst[secret_number] = '..'
-    question = ' '.join(lst)
+    first_progression_member = random.randint(0, NUMBER_RANGE_BORDER)
+    progression_step = random.randint(2, STEP_BORDER)
+    progression = returns_arithmetic_progression(
+        first_progression_member, progression_step
+    )
+    secret_number = random.randint(0, len(progression))
+    correct_answer = progression[secret_number]
+    progression[secret_number] = ".."
+    question = " ".join(progression)
     return correct_answer, question
 
 
-DESCRIPTION = 'What number is missing in the progression?'
+def returns_arithmetic_progression(progression_member, progression_step):
+    """Получение строкового представления прогрессии."""
+    result, index = [], 0
+    while index < 10:
+        result.append(str(progression_member))
+        progression_member = calculates_next_progression_member(
+            progression_member, progression_step
+        )
+        index += 1
+    return result
+
+
+def calculates_next_progression_member(first_progression_member, progression_step):
+    """Расчитывает следующий после пеового член прогрессии."""
+    return first_progression_member + progression_step

@@ -4,5 +4,5 @@
 
 def welcome_user():
     """Возвращает имя пользователя Returns: name."""
-    name = input('May I have your name? ')
+    name = input("May I have your name? ")
     return name

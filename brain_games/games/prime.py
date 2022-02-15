@@ -3,29 +3,31 @@
 import random
 
 
-def prime(number):
+RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RIGHT_BORDER = 100
+
+
+def is_prime(number):
     """Проверяет простое ли число.
 
     Args:
         number: заданное число
     """
-    count, correct_answer = 0, ''
-    for index in range(1, number):
+    count, flag = 0, True
+    for index in range(1, number + 1):
         if number % index == 0:
             count += 1
         if count >= 2:
-            correct_answer = 'no'
-            break
-        else:
-            correct_answer = 'yes'
-    return correct_answer
+            flag = False
+    return flag
 
 
-def answer_and_question():
+def generates_answer_and_question():
     """Логика игры."""
-    right_border = 100
-    number = random.randrange(1, right_border)
-    return prime(number), number
-
-
-DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    number = random.randrange(1, RIGHT_BORDER)
+    correct_answer = ""
+    if is_prime(number):
+        correct_answer = "yes"
+    else:
+        correct_answer = "no"
+    return correct_answer, number

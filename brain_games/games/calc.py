@@ -2,16 +2,17 @@
 """Игра с калькулятором."""
 import random
 
+RULE = "What is the result of the expression?"
+OPERATORS = ["+", "*", "-"]
+RIGHT_BORDER = 25
 
-def answer_and_question():
+
+def generates_answer_and_question():
     """Логика игры."""
-    operators, correct_answer, right_border = ['+', '*', '-'], 0, 25
-    random_operators = random.choice(operators)
-    first_num = random.randrange(0, right_border)
-    second_num = random.randrange(0, right_border)
-    question = '{0} {1} {2}'.format(first_num, random_operators, second_num)
+    correct_answer = 0
+    random_operators = random.choice(OPERATORS)
+    first_number = random.randint(0, RIGHT_BORDER)
+    second_number = random.randint(0, RIGHT_BORDER)
+    question = f"{first_number} {random_operators} {second_number}"
     correct_answer = eval(question)
     return correct_answer, question
-
-
-DESCRIPTION = 'What is the result of the expression?'
