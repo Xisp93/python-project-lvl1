@@ -2,7 +2,6 @@
 """Движок для игр."""
 import prompt
 
-
 NUMBER_OF_ROUNDS = 3
 
 
@@ -25,8 +24,10 @@ def run_game(game):
         if answer == right_answer:
             print("Correct!")
         else:
+            # noinspection TaskProblemsInspection
             print(
-                f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'."
+                f"'{answer}' is wrong answer ;(. Correct answer was\
+ '{right_answer}'."
             )
             print(f"Let's try again, {name}!")
             break

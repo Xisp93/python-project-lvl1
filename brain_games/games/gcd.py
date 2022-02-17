@@ -2,7 +2,6 @@
 """Игра ,в которой находят НОД."""
 import random
 
-
 RULE = "Find the greatest common divisor of given numbers."
 RIGHT_BORDER = 100
 

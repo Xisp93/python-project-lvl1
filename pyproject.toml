@@ -16,6 +16,8 @@ classifiers = [
 python = "^3.8"
 prompt = "^0.4.1"
 black = "^22.1.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
@@ -26,9 +28,9 @@ brain-progression= "brain_games.scripts.brain_progression:main"
 brain-prime= "brain_games.scripts.brain_prime:main"
 
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.16.0"
 autopep8 = "^1.6.0"
 pylint = "^2.12.2"
+wemake-python-styleguide = "^0.15.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

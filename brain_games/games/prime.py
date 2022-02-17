@@ -2,7 +2,6 @@
 """Простое ли число."""
 import random
 
-
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 RIGHT_BORDER = 100
 
