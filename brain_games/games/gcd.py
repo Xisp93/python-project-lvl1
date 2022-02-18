@@ -11,8 +11,8 @@ def calculates_gcd(first_number, second_number):
     """Вычисление НОД.
 
     Args:
-        first_number: первое случайное число
-        second_number: второе случайное число
+        first_number: первое случайное число.
+        second_number: второе случайное число.
     """
     index, index1, divider_first_number, divider_second_number = 0, 0, [], []
     while index <= first_number:
