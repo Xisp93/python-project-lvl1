@@ -3,9 +3,10 @@
 import random
 
 RULE = "What number is missing in the progression?"
-NUMBER_RANGE_BORDER = 50
-STEP_BORDER = 7
+RANGE_BORDER = 50
+STEP_LIMIT = 7
 LENGTH_PROGRESSION = 10
+REFERENCE_POINT = 1
 
 
 def calculate_next_member(first_progression_member, progression_step):
@@ -30,12 +31,12 @@ def returns_arithmetic_progression(progression_term, step):
 
 def generates_answer_and_question():
     """Функция, которая реализует логику игры."""
-    first_progression_member = random.randint(0, NUMBER_RANGE_BORDER)
-    progression_step = random.randint(2, STEP_BORDER)
+    first_progression_member = random.randint(REFERENCE_POINT, RANGE_BORDER)
+    progression_step = random.randint(REFERENCE_POINT, STEP_LIMIT)
     progression = returns_arithmetic_progression(
         first_progression_member, progression_step
     )
-    secret_number = random.randint(0, LENGTH_PROGRESSION)
+    secret_number = random.randint(REFERENCE_POINT, LENGTH_PROGRESSION)
     correct_answer = progression[secret_number]
     progression[secret_number] = ".."
     question = " ".join(progression)

@@ -4,6 +4,7 @@ import random
 
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 RIGHT_BORDER = 100
+REFERENCE_POINT = 1
 
 
 def is_even(number):
@@ -11,17 +12,13 @@ def is_even(number):
     Args:
         number - число ,которое проверяем.
     """
-    if number % 2 == 0:
-        return True
-    else:
-        return False
+    return True if number % 2 == 0 else False
 
 
 def generates_answer_and_question():
     """Games."""
-    number = random.randint(0, RIGHT_BORDER)
+    number = random.randint(REFERENCE_POINT, RIGHT_BORDER)
     if is_even(number):
-        correct_answer = "yes"
+        return "yes", number
     else:
-        correct_answer = "no"
-    return correct_answer, number
+        return "no", number

@@ -31,5 +31,5 @@ def run_game(game):
             )
             print(f"Let's try again, {name}!")
             break
-    if index == 3:
-        print(f"Congratulations, {name}!")
+        if index == NUMBER_OF_ROUNDS:
+            print(f"Congratulations, {name}!")
