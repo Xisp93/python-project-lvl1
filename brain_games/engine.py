@@ -24,7 +24,6 @@ def run_game(game):
         if answer == right_answer:
             print("Correct!")
         else:
-            # noinspection TaskProblemsInspection
             print(
                 f"'{answer}' is wrong answer ;(. Correct answer was\
  '{right_answer}'."

@@ -6,7 +6,7 @@ RULE = "What number is missing in the progression?"
 RANGE_BORDER = 50
 STEP_LIMIT = 7
 LENGTH_PROGRESSION = 10
-REFERENCE_POINT = 1
+REFERENCE_POINT = 0
 
 
 def calculate_next_member(first_progression_member, progression_step):
@@ -36,7 +36,7 @@ def generates_answer_and_question():
     progression = returns_arithmetic_progression(
         first_progression_member, progression_step
     )
-    secret_number = random.randint(REFERENCE_POINT, LENGTH_PROGRESSION)
+    secret_number = random.randint(REFERENCE_POINT, LENGTH_PROGRESSION - 1)
     correct_answer = progression[secret_number]
     progression[secret_number] = ".."
     question = " ".join(progression)
